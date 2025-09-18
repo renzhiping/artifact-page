@@ -1,0 +1,366 @@
+"use client";
+
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { 
+  Users, BookOpen, User, Brain, TrendingDown, CheckCircle,
+  AlertTriangle, BarChart3, Send, Eye, PieChart,
+  Target, Award, Clock, Zap, FileText, UserCheck
+} from 'lucide-react'
+import Navigation from './navigation'
+
+const ClassAnalysis = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <Navigation />
+        
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="flex justify-center items-center gap-2 mb-4">
+            <Users className="w-8 h-8 text-teal-600" />
+            <h1 className="text-3xl font-bold text-gray-800">班级学习情况分析</h1>
+          </div>
+          <p className="text-lg text-gray-600">AI智能分析班级整体学习状况，识别普遍难点</p>
+        </div>
+
+        {/* Teacher Question */}
+        <Card className="mb-8 border-l-4 border-l-blue-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-700">
+              <User className="w-5 h-5" />
+              教师问题
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-gray-700 italic leading-relaxed">
+                "我是 1 班的老师，请帮我分析一下班级在《强化学习：基于环境交互的智能决策系统》这一章的整体学习情况，大家的普遍难点是什么？"
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* AI Analysis Response */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-teal-700">
+              <Brain className="w-5 h-5" />
+              AI 助手分析
+            </CardTitle>
+            <CardDescription>正在分析【AI 导论 1 班】学习数据...</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-700 leading-relaxed">
+              你好，老师。已拉取【AI 导论 1 班】（模拟共 48 人）在《强化学习》章节的学习数据：
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Dashboard Artifact */}
+        <Card className="mb-8 bg-gradient-to-r from-teal-500 to-emerald-600 text-white">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <BarChart3 className="w-6 h-6" />
+              [Artifact] 班级学习分析仪表盘
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="bg-white/20 p-4 rounded-lg">
+              <h3 className="font-bold text-lg mb-2">班级概况：AI 导论 1 班（48人）</h3>
+              <p className="text-teal-100">《强化学习：基于环境交互的智能决策系统》章节分析</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* 1. Overall Progress */}
+        <Card className="mb-8 border-l-4 border-l-green-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-green-700 text-xl">
+              <TrendingDown className="w-6 h-6" />
+              1. 整体进度与参与度
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-green-50 p-6 rounded-lg border border-green-200 text-center">
+                <BookOpen className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-green-800 mb-2">75%</div>
+                <p className="text-green-700 font-medium">教材阅读完成率 (平均)</p>
+              </div>
+              
+              <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 text-center">
+                <FileText className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-blue-800 mb-2">89%</div>
+                <p className="text-blue-700 font-medium">'贪吃蛇'案例测验提交率</p>
+                <p className="text-xs text-blue-600 mt-1">(43 / 48 人)</p>
+              </div>
+              
+              <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 text-center">
+                <Award className="w-8 h-8 text-orange-600 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-orange-800 mb-2">68.5</div>
+                <p className="text-orange-700 font-medium">章节测验平均分</p>
+                <p className="text-xs text-orange-600 mt-1">低于课程平均分 75 分</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Visual Chart Design */}
+        <Card className="mb-8 border-l-4 border-l-purple-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-purple-700">
+              <PieChart className="w-5 h-5" />
+              视觉图表设计思路
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-32 h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center border-2 border-purple-300">
+                  <div className="text-center">
+                    <BarChart3 className="w-12 h-12 text-purple-600 mx-auto mb-2" />
+                    <p className="text-xs text-purple-600">条形图</p>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-700 italic mb-2">
+                    <strong>设计理念：</strong> 生成一个"条形图"，按错误率从高到低排列知识点。
+                  </p>
+                  <div className="flex items-center gap-4 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-red-500 rounded"></div>
+                      <span>高错误率 (≥40%)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                      <span>中等错误率 (15-39%)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-green-500 rounded"></div>
+                      <span>低错误率 (<15%)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* 2. Knowledge Points Mastery */}
+        <Card className="mb-8 border-l-4 border-l-indigo-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-indigo-700 text-xl">
+              <Target className="w-6 h-6" />
+              2. 知识点掌握情况 (基于测验错误率)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {/* Well Mastered */}
+            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-800 mb-3 flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                掌握良好 (错误率 &lt; 15%)：
+              </h4>
+              <div className="space-y-2">
+                <div className="bg-white p-3 rounded border border-green-200 flex items-center justify-between">
+                  <span className="text-gray-700">强化学习 vs 监督学习 (教练开车的比喻)</span>
+                  <Badge className="bg-green-600 text-white">8% 错误率</Badge>
+                </div>
+                <div className="bg-white p-3 rounded border border-green-200 flex items-center justify-between">
+                  <span className="text-gray-700">智能体 (Agent) 和 环境 (Environment) 的定义</span>
+                  <Badge className="bg-green-600 text-white">12% 错误率</Badge>
+                </div>
+              </div>
+            </div>
+
+            {/* Common Difficulties */}
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <h4 className="font-semibold text-red-800 mb-3 flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4" />
+                普遍难点 (高错误率知识点)：
+              </h4>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded border border-red-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Badge className="bg-red-600 text-white mt-1">1</Badge>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="font-semibold text-red-800">[贝尔曼方程 (Bellman Equation)]</h5>
+                        <Badge variant="outline" className="text-red-700 border-red-300">55% 错误率</Badge>
+                      </div>
+                      <div className="bg-red-100 p-3 rounded">
+                        <p className="text-sm text-red-700">
+                          <strong>分析：</strong> 多数学生混淆了'当前奖励'和'未来折扣价值'的关系，无法正确计算损失函数中的'目标值'。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded border border-red-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Badge className="bg-red-600 text-white mt-1">2</Badge>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="font-semibold text-red-800">[状态表示 (State Representation)]</h5>
+                        <Badge variant="outline" className="text-red-700 border-red-300">42% 错误率</Badge>
+                      </div>
+                      <div className="bg-red-100 p-3 rounded">
+                        <p className="text-sm text-red-700">
+                          <strong>分析：</strong> 在'贪吃蛇'案例中，学生不理解为什么状态表示 (11 个数值) 中，'食物位置'和'蛇头朝向'要分开表示。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded border border-red-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Badge className="bg-red-600 text-white mt-1">3</Badge>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="font-semibold text-red-800">[奖励机制 (Reward)]</h5>
+                        <Badge variant="outline" className="text-red-700 border-red-300">30% 错误率</Badge>
+                      </div>
+                      <div className="bg-red-100 p-3 rounded">
+                        <p className="text-sm text-red-700">
+                          <strong>分析：</strong> 学生对'贪吃蛇'案例中为什么'正常移动'奖励为 0（而不是 -1）理解不深，混淆了惩罚和中性反馈。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* 3. Students Need Attention */}
+        <Card className="mb-8 border-l-4 border-l-orange-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-orange-700 text-xl">
+              <UserCheck className="w-6 h-6" />
+              3. 需要关注的学生
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+              <p className="text-orange-800 font-medium mb-4">
+                以下 6 名学生在该章节测验中得分低于 60 分，且阅读进度缓慢：
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                {['学生 A', '学生 B', '学生 C', '学生 D', '学生 E', '学生 F'].map((student, index) => (
+                  <div key={index} className="bg-white p-3 rounded border border-orange-200 text-center">
+                    <User className="w-8 h-8 text-orange-600 mx-auto mb-2" />
+                    <p className="font-medium text-gray-800">{student}</p>
+                    <div className="flex justify-center gap-2 mt-2">
+                      <Badge variant="outline" className="text-orange-700 border-orange-300 text-xs">
+                        {45 + Math.floor(Math.random() * 15)}分
+                      </Badge>
+                      <Badge variant="outline" className="text-red-700 border-red-300 text-xs">
+                        {30 + Math.floor(Math.random() * 20)}%进度
+                      </Badge>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Teaching Suggestions */}
+        <Card className="mb-8 border-l-4 border-l-blue-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-blue-700 text-xl">
+              <Zap className="w-6 h-6" />
+              教学建议
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              <div className="flex items-start gap-3">
+                <Badge className="bg-blue-600 text-white mt-1">1</Badge>
+                <div>
+                  <p className="text-gray-700">
+                    建议在下次课上，重点讲解'贝尔曼方程'的递归思想，特别是'目标值'的计算过程。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              <div className="flex items-start gap-3">
+                <Badge className="bg-blue-600 text-white mt-1">2</Badge>
+                <div>
+                  <p className="text-gray-700">
+                    可以考虑出一个练习题，让学生自己设计'贪吃蛇'的'状态表示'，并讨论不同方案的优劣。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Interactive Functions */}
+        <Card className="mb-8 bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Zap className="w-5 h-5" />
+              智能交互功能
+            </CardTitle>
+            <CardDescription className="text-emerald-100">
+              一键操作，精准支持教学
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 h-16">
+                <div className="text-center">
+                  <Send className="w-6 h-6 mx-auto mb-1" />
+                  <span className="text-sm">向"需要关注的学生"推送'贝尔曼方程'的强化练习包</span>
+                </div>
+              </Button>
+              
+              <Button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 h-16">
+                <div className="text-center">
+                  <Eye className="w-6 h-6 mx-auto mb-1" />
+                  <span className="text-sm">查看"贝尔曼方程"相关题目错误详情</span>
+                </div>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Additional Actions */}
+        <div className="grid md:grid-cols-4 gap-4 mb-8">
+          <Button variant="outline" className="bg-green-50 hover:bg-green-100 border-green-300 text-green-700 h-12">
+            <BarChart3 className="w-4 h-4 mr-2" />
+            生成详细报告
+          </Button>
+          <Button variant="outline" className="bg-blue-50 hover:bg-blue-100 border-blue-300 text-blue-700 h-12">
+            <Users className="w-4 h-4 mr-2" />
+            学生个人分析
+          </Button>
+          <Button variant="outline" className="bg-purple-50 hover:bg-purple-100 border-purple-300 text-purple-700 h-12">
+            <Clock className="w-4 h-4 mr-2" />
+            历史趋势对比
+          </Button>
+          <Button variant="outline" className="bg-orange-50 hover:bg-orange-100 border-orange-300 text-orange-700 h-12">
+            <Target className="w-4 h-4 mr-2" />
+            设置预警阈值
+          </Button>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center mt-8 text-gray-500">
+          <p className="text-sm">© 2024 班级学习分析系统 - AI智能教学管理助手</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ClassAnalysis
