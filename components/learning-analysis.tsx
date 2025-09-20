@@ -232,61 +232,65 @@ const LearningPlan = () => {
                 </section>
 
                 {/* Module 3: Recommendations */}
-                <section className="mb-12">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2"><Lightbulb />行动建议与智能推荐</h2>
-                    <div className="space-y-6">
-                        <Card className="border-l-4 border-red-500">
-                            <CardHeader>
-                                <CardTitle className="text-red-700">根源诊断与首要任务</CardTitle>
-                            </CardHeader>
-                            <CardContent>
+                <Card className="mb-12 border-l-4 border-l-teal-500">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-teal-700 text-xl">
+                            <Lightbulb className="w-6 h-6" />
+                            行动建议与智能推荐
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-6 space-y-6">
+                        <div>
+                            <h4 className="font-semibold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                                <AlertTriangle className="w-5 h-5 text-red-600" />
+                                根源诊断与首要任务
+                            </h4>
+                            <div className="p-4 rounded-md bg-white border border-red-200 border-l-4 border-l-red-500">
                                 <p className="whitespace-pre-line text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: recommendations.diagnosis.replace(/`\[(.*?)\]`/g, '<code class="bg-red-100 text-red-800 font-semibold px-1.5 py-0.5 rounded">$1</code>') }} />
-                            </CardContent>
-                        </Card>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2"><AlertTriangle className="text-yellow-500" />立即复习 (薄弱知识点)</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-2">
-                                        {recommendations.reviewItems.map(item => (
-                                            <li key={item} className="flex items-center gap-3 p-2 bg-yellow-50 rounded-md">
-                                                <AlertTriangle className="w-4 h-4 text-yellow-600" />
-                                                <span className="text-yellow-800 font-medium">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                            </Card>
-
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2"><Target className="text-blue-500" />推荐学习路径与资源</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-4">
-                                        {recommendations.learningPath.map(path => (
-                                            <li key={path.step}>
-                                                <h4 className="font-semibold text-blue-800">{path.step}</h4>
-                                                <p className="text-sm text-gray-600 pl-4 border-l-2 border-blue-200 ml-2 py-1 my-1" dangerouslySetInnerHTML={{ __html: path.focus.replace(/`\[(.*?)\]`/g, '<code class="bg-blue-100 text-blue-800 font-semibold px-1 py-0.5 rounded">$1</code>') }} />
-                                                <div className="mt-2 space-y-2">
-                                                    {path.resources.map(res => (
-                                                        <Button key={res.title} variant="outline" className="w-full justify-start gap-3">
-                                                            <res.icon className="w-4 h-4 text-gray-500" />
-                                                            {res.title}
-                                                        </Button>
-                                                    ))}
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                            </Card>
+                            </div>
                         </div>
-                    </div>
-                </section>
+
+                        <div className="space-y-6">
+                            <div>
+                                <h4 className="font-semibold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                                    <Target className="w-5 h-5 text-yellow-600" />
+                                    立即复习 (薄弱知识点)
+                                </h4>
+                                <ul className="space-y-3">
+                                    {recommendations.reviewItems.map(item => (
+                                        <li key={item} className="flex items-center gap-3 p-3 rounded-md bg-white border">
+                                            <AlertTriangle className="w-4 h-4 text-yellow-500 flex-shrink-0" />
+                                            <span className="text-yellow-900 font-medium text-sm">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg text-gray-800 mb-3 flex items-center gap-2">
+                                    <PlayCircle className="w-5 h-5 text-blue-600" />
+                                    推荐学习路径与资源
+                                </h4>
+                                <ul className="space-y-4">
+                                    {recommendations.learningPath.map(path => (
+                                        <li key={path.step} className="p-3 rounded-md bg-white border">
+                                            <h5 className="font-semibold text-blue-900 text-sm">{path.step}</h5>
+                                            <p className="text-xs text-gray-600 mt-1 mb-2 pl-1" dangerouslySetInnerHTML={{ __html: path.focus.replace(/`\[(.*?)\]`/g, '<code class="bg-blue-100 text-blue-800 font-semibold px-1 py-0.5 rounded">$1</code>') }} />
+                                            <div className="mt-2 space-y-2">
+                                                {path.resources.map(res => (
+                                                    <Button key={res.title} variant="outline" className="w-full justify-start gap-3 h-auto py-2 text-left">
+                                                        <res.icon className="w-4 h-4 text-gray-500 flex-shrink-0 mt-1" />
+                                                        <span className="text-sm whitespace-normal">{res.title}</span>
+                                                    </Button>
+                                                ))}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
 
                 {/* Module 4: Learning Insights */}
                 <section className="mb-12">

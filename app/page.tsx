@@ -24,7 +24,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
                                 <Brain className="w-8 h-8 text-indigo-600" />
                             </div>
-                            <CardTitle className="text-2xl text-indigo-700">神经网络入门</CardTitle>
+                            <CardTitle className="text-2xl text-indigo-700">知识问答</CardTitle>
                             <CardDescription className="text-gray-600">
                                 学习神经元、权重和偏置等核心概念，理解AI的智能决策系统
                             </CardDescription>
@@ -45,7 +45,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-200 transition-colors">
                                 <Layers className="w-8 h-8 text-teal-600" />
                             </div>
-                            <CardTitle className="text-2xl text-teal-700">聚类分析</CardTitle>
+                            <CardTitle className="text-2xl text-teal-700">学习资源推荐</CardTitle>
                             <CardDescription className="text-gray-600">
                                 掌握无监督学习的核心应用，学习数据自主分组与模式发现
                             </CardDescription>
@@ -66,7 +66,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
                                 <BarChart3 className="w-8 h-8 text-purple-600" />
                             </div>
-                            <CardTitle className="text-2xl text-purple-700">学习情况分析</CardTitle>
+                            <CardTitle className="text-2xl text-purple-700">个人学习情况分析</CardTitle>
                             <CardDescription className="text-gray-600">
                                 AI智能分析学习状态，精准定位优势与薄弱环节，个性化学习建议
                             </CardDescription>
@@ -87,7 +87,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan-200 transition-colors">
                                 <Calendar className="w-8 h-8 text-cyan-600" />
                             </div>
-                            <CardTitle className="text-2xl text-cyan-700">学习规划</CardTitle>
+                            <CardTitle className="text-2xl text-cyan-700">个人学习规划</CardTitle>
                             <CardDescription className="text-gray-600">
                                 个性化学习路径规划，深度案例分析，3天强化学习计划
                             </CardDescription>
@@ -108,7 +108,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
                                 <Target className="w-8 h-8 text-orange-600" />
                             </div>
-                            <CardTitle className="text-xl text-orange-700">覆盖度分析</CardTitle>
+                            <CardTitle className="text-xl text-orange-700">资源覆盖度分析</CardTitle>
                             <CardDescription className="text-gray-600 text-sm">
                                 分析题库对教材知识点的覆盖情况，智能生成改进建议
                             </CardDescription>
@@ -129,7 +129,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-teal-200 transition-colors">
                                 <Users className="w-8 h-8 text-teal-600" />
                             </div>
-                            <CardTitle className="text-xl text-teal-700">班级分析</CardTitle>
+                            <CardTitle className="text-xl text-teal-700">班级学习情况分析</CardTitle>
                             <CardDescription className="text-gray-600 text-sm">
                                 分析班级整体学习状况，识别普遍难点和重点关注学生
                             </CardDescription>
