@@ -16,7 +16,7 @@ const NeuralNetworkEducation = () => {
                 <div className="text-center mb-8">
                     <div className="flex justify-center items-center gap-2 mb-4">
                         <Brain className="w-8 h-8 text-indigo-600" />
-                        <h1 className="text-3xl font-bold text-gray-800">神经网络入门：AI的智能决策系统</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">知识问答</h1>
                     </div>
                     <p className="text-lg text-gray-600">了解神经元、权重和偏置的工作原理</p>
                 </div>
