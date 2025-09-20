@@ -1,4 +1,4 @@
-import NeuralNetworkEducation from '@/components/neural-network-education'
+import NeuralNetworkEducation from '@/components/answer'
 
 export default function NeuralNetworkPage() {
     return (
