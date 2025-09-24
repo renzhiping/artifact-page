@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Brain, Layers, BookOpen, ArrowRight, BarChart3, Calendar, Target, Users } from 'lucide-react'
+import { Brain, Layers, BookOpen, ArrowRight, BarChart3, Calendar, Target, Users, Route } from 'lucide-react'
 
 export default function Home() {
     return (
@@ -138,6 +138,27 @@ export default function Home() {
                             <Link href="/class-analysis">
                                 <Button className="w-full bg-teal-600 hover:bg-teal-700">
                                     查看分析
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </Button>
+                            </Link>
+                        </CardContent>
+                    </Card>
+
+                    {/* System Response Timeline Card */}
+                    <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-slate-200">
+                        <CardHeader className="text-center pb-4">
+                            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-colors">
+                                <Route className="w-8 h-8 text-slate-700" />
+                            </div>
+                            <CardTitle className="text-xl text-slate-800">系统响应时间线</CardTitle>
+                            <CardDescription className="text-gray-600 text-sm">
+                                复刻 Manus 处理流程，查看 AI 助手如何逐步生成学习规划
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                            <Link href="/system-response">
+                                <Button className="w-full bg-slate-700 hover:bg-slate-800">
+                                    查看流程
                                     <ArrowRight className="w-4 h-4 ml-2" />
                                 </Button>
                             </Link>
